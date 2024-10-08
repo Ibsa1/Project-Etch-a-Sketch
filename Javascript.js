@@ -33,5 +33,9 @@ function addDivs(userInput){
 }
 
 let userInput = parseInt(prompt("Please Enter Value: "));
+
+while(userInput>100){
+    userInput = parseInt(prompt("Please Enter Value: "));
+}
 let childDivMeasurement = 880/userInput;
 addDivs(userInput);
