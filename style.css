@@ -7,3 +7,6 @@ body{
     flex-wrap: wrap;
     justify-content: space-between;
 }
+.child:hover {
+    background-color: blue;
+  }
