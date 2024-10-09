@@ -16,38 +16,34 @@ function addDivs(userInput){
             fatherDiv.appendChild(childDiv);
         }
     }
-    //let buttonContainer = document.querySelector(".buttonContainer"); //remove the button after each display
-    //buttonContainer.createElement('p');
-
-
 }
 
-let userInput = parseInt(prompt("Please Enter Value: "));
+let isButtonClicked = false;
+
+const btn = document.querySelector(".noOfSquares");
+btn.addEventListener("click", noOfSquareInput);
+
+
+let childDivMeasurement = 0;
+
+function noOfSquareInput(){
+
+    let userInput = parseInt(prompt("Please Enter Value: "));
 
     while(userInput>100){
         userInput = parseInt(prompt("Please Enter Value: "));
     }
-let childDivMeasurement = 880/userInput;
-addDivs(userInput);
 
+    if(isButtonClicked){
+        //fatherDiv.innerHTML = ""; // Clear the container. Option 1
+        fatherDiv.replaceChildren();  // Clear the container. OPtion 2
+    }
 
-//let userInput = parseInt(prompt("Please Enter Value: "));
-/*
-const btn = document.querySelector(".noOfSquares");
-userInput = btn.addEventListener("click", squareInput);
-console.log(userInput);
-*/
-
-/*
-function squareInput(){
-    let customerInput = parseInt(prompt("Please Enter Value: "));
-
-    //while(customerInput>100){
-    //    customerInput = parseInt(prompt("Please Enter Value: "));
-    //}
-    //let childDivMeasurement = 880/userInput;
-    //addDivs(customerInput);
-    return customerInput;
+    childDivMeasurement = 880/userInput;
+    addDivs(userInput);
+    isButtonClicked=true;   
 }
 
-*/
+
+
+

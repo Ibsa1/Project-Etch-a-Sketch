@@ -1,5 +1,6 @@
 body{
     max-width: 960px;
+    margin-left: 285px;
 }
 
 .container{
@@ -10,3 +11,13 @@ body{
 .child:hover {
     background-color: blue;
   }
+
+.buttonContainer{
+margin: 25px;
+display: flex;
+justify-content: center;
+}
+
+button{
+    padding: 20px;
+}
